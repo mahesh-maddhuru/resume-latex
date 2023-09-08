@@ -1,9 +1,12 @@
 
 \documentclass[]{resume-openfont}
+\usepackage{qrcode}
 \usepackage{fancyhdr}
+\usepackage{atbegshi,picture}
+\usepackage{lipsum}
 \pagestyle{fancy}
 \fancyhf{}
- 
+
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -12,7 +15,9 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lastupdated
-
+\AtBeginShipout{\AtBeginShipoutUpperLeft{%
+  \put(\dimexpr\paperwidth-1.8cm\relax,-0.999cm){\qrcode[height=0.65in]{https://mahesh-maddhuru.github.io/resume-latex/mahesh-maddhuru.pdf}}%
+}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     TITLE NAME
@@ -43,6 +48,7 @@
 
 \subsection{Virginia Tech}
 \descript{MEng in Computer Science}
+\location{ GPA: 3.95 / 4.0}
 \location{December 2023 | Blacksburg, VA}
 \sectionsep
 
@@ -53,26 +59,20 @@
 \location{Grad. May 2019 | Bangalore, IN}
 \sectionsep
 
-\subsection{Vikaas}
-\descript{High School}
-\location{ Grade: 95.16\%}
-\location{Grad. May 2015 |  Mangalore, IN}
-\sectionsep
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     COURSEWORK
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Coursework}
-\subsection{Graduate}
-Networks and Protocols \\
-Network Security \\
-Information Security \\
-Blockchain \\
-Information Storage and Retrieval \\
-Web Development \\
-Machine Learning \\
-Al Tools Software Development \\
+\section{Research Assistant}
+\subsection{\href{https://rovista.netsecurelab.org/}{RoVista}}
+\location{SpringBoot | VueJS | DynamoDB }
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\textbullet{} \textbf{Single-handedly} spearheaded the \href{https://rovista.netsecurelab.org/}{RoVista} dashboard for \href{mailto:tijay@vt.edu}{\textbf{Prof. Tijay Chung}}. \\
+\textbullet{} Automated deployment on \textbf{EC2} with \textbf{Docker} and \textbf{GitLab CI/CD} \\
+\textbullet{} Added \textbf{Caching}, created numerous \textbf{Analytic graphs}, opened APIs for public use. \\
+\textbullet{} Set up an \textbf{automated data refresh pipeline}.
+
 \sectionsep
 
 \section{Publication}
@@ -91,7 +91,7 @@ Java \textbullet{}   JavaScript \textbullet{} Python \textbullet{} C++ \\~\\
 \subsection{Frameworks}
 Dropwizard \textbullet{} Dagger 2.0 \textbullet{} SpringBoot \textbullet{} Terraform \textbullet{} Express JS \textbullet{} Android \textbullet{} Hibernate \textbullet{} JUnit \textbullet{} Mockito \textbullet{} Flask \textbullet{} Selenium \\~\\
 \subsection{Databases}
-Oracle DB \textbullet{} MongoDB \textbullet{} MySQL \\~\\
+Oracle DB \textbullet{} MongoDB \textbullet{} MySQL \textbullet{} DynamoDB \\~\\
 \subsection{Software Tools}
 Oracle Cloud \textbullet{} AWS \textbullet{} CI/CD tools \textbullet{} DevOps \textbullet{} Docker \textbullet{} GIT \textbullet{} Maven \textbullet{} Gradle \\~\\
 \subsection{Web Development}
@@ -116,11 +116,11 @@ VueJS \textbullet{}  AngularJS \textbullet{} JQuery \textbullet{} Bootstrap \\~\
 \descript{| Member of Technical Staff IC2 (SDE-2) }
 \location{October 2021 – December 2022 | Bangalore, IN}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
-\item \textbf{Led a project aimed at applying rapid patches to live hypervisors} and developed its entire infrastructure, effectively bringing down the \textbf{patching time to under 15 minutes}.
-\item Successfully navigated the project through the \textbf{CSSAP security review process}.
-\item Redesigned and developed modules for Yum management, Linux system file modification, custom package installation, and validations.
-\item These Modules \textbf{optimized the 'image build pipeline'}, reducing build time by approximately 20\% and enhancing its stability.
+\item \textbf{Led} a project to speed up \textbf{live hypervisor patching}, reducing patching time to \textbf{less than 15 minutes}.
+\item Successfully guided the project through the \textbf{CSSAP security review process}.
+\item Revamped and created modules for Yum management, Linux system file adjustments, custom package installation, and validations, which optimized the \textbf{'image build pipeline'} and reduced build time by approximately 20\% while enhancing its stability.
 \item Developed a versatile Maven plugin for parallel \textbf{Docker image retrieval} on all build hosts, thus reducing the test suit execution time by 20\%.
 \item As the \textbf{Release coordinator}, deployed the updated Hypervisor base image on the Virtual Machine Infrastructure fleet on \textbf{various OCI regions}.
 \item As an \textbf{On-Call engineer}, successfully resolved a multitude of customer issues.
@@ -130,11 +130,11 @@ VueJS \textbullet{}  AngularJS \textbullet{} JQuery \textbullet{} Bootstrap \\~\
 \runsubsection{Akamai}
 \descript{| Software Engineer II + Software Engineer + Intern }
 \location{January 2019 – September 2021 | Bangalore, IN}
-% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
-\item Designed and developed the \textbf{"Activation" algorithm}, which \textbf{automated the product launch lifecycle} with a \textbf{smart retry mechanism} and reduced the product operations team's efforts by 50\%. It efficiently handled complex business logic, including the \textbf{calculation of product pricing} based on factors like region, rate card, and partner discount.
+\item Designed and developed the \textbf{"Activation" algorithm}, which \textbf{automated the product launch lifecycle} with a \textbf{smart retry mechanism} and reduced the product operations team's efforts by 50\%.
 \item \textbf{Developed Authorization layer} from the ground up with granular data access control.
-\item Developed a robust \textbf{lock mechanism} to prevent product data changes in a non-draft state during configuration workflow.
+\item Developed a robust \textbf{lock mechanism} to prevent product data changes during configuration workflow.
 \item Implemented \textbf{inter-service communication} and \textbf{data caching} for client and partner APIs to ensure fast response times (<1 second).
 \item \textbf{Streamlined integration processes} to facilitate seamless connectivity between our services and multiple client systems.
 \item Built many reusable \textbf{UI components on AngularJS} for configuring product metadata.
@@ -144,7 +144,7 @@ VueJS \textbullet{}  AngularJS \textbullet{} JQuery \textbullet{} Bootstrap \\~\
 \runsubsection{Leanovate Solutions}
 \descript{| Fullstack Engineer Intern }
 \location{June 2018 - November 2018 | Bangalore, IN}
-% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
 \item Assisted in designing a \textbf{MongoDB} database  for a building management system.
 \item Developed \textbf{REST APIs in ExpressJS} to manage meeting room booking.
@@ -166,7 +166,7 @@ A portable \textbf{blockchain system} that uses a custom protocol to enable \tex
 
 \runsubsection{BMS.net}
 \descript{| Android, Firebase, Google Map API}
-An Android social media app that lists and \textbf{notifies the university's circulars}, lists upcoming live events, \textbf{pins live events} like workshops, etc. on the university map, and features student community \textbf{group live chat}.
+An Android social media app that lists and \textbf{notifies the university's circulars}, lists upcoming live events, \textbf{pins live events} geographically like workshops, etc. on the university map, and features student community \textbf{group live chat}.
 \sectionsep
 
 \end{minipage}
